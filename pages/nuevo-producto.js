@@ -60,7 +60,8 @@ const NuevoProducto = () => {
             creador: {
                 id: usuario.uid,
                 nombre: usuario.displayName,
-            }
+            },
+            haVotado: [],
         }
 
         //insertar base de datos
@@ -108,7 +109,7 @@ const NuevoProducto = () => {
                                 <legend>Información General</legend>
                                 <Campo>
                                     <label htmlFor='nombre'>Nombre</label>
-                                    <input type='text' id='nombre' placeholder='Tu nombre' name='nombre' value={nombre} onChange={handleChange} onBlur={handleBlur} />
+                                    <input type='text' id='nombre' placeholder='Nombre del producto' name='nombre' value={nombre} onChange={handleChange} onBlur={handleBlur} />
                                 </Campo>
                                 {errores.nombre && <Error>{errores.nombre}</Error>}
                                 <Campo>
